@@ -51,6 +51,11 @@ section {
   align-items: center;
 }
 
+section:last-of-type {
+  min-height: fit-content;
+  padding: 1rem 1rem;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -127,7 +132,7 @@ section {
 }
 
 .social-links a:hover {
-  color: #00ff9d;
+  color: #a5a5a5;
 }
 
 h2 {
