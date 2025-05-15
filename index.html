@@ -3,23 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raya Rama's Portfolio Pages</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>My Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
-      <nav>
+    <nav>
+      <div class="nav-content">
+        <h1>My Portfolio</h1>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
-    <main id="hero">
-      <h1>Welcome to Raya Rama's Portfolio Page</h1>
-    </main>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Frontend Developer | UI Designer | Creator</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate frontend developer who loves creating beautiful and
+          functional websites.
+        </p>
+        <div class="skills">
+          <div class="skill">HTML5</div>
+          <div class="skill">CSS3</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Responsive Design</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Project 1</h3>
+            <p>A responsive website built with HTML and CSS</p>
+            <a href="#" class="btn">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Project 2</h3>
+            <p>An interactive web application using JavaScript</p>
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
