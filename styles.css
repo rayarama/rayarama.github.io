@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.6;
 }
 
@@ -41,7 +41,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00ff9d;
+  color: #a5a5a5;
 }
 
 section {
