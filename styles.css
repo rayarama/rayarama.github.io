@@ -101,6 +101,10 @@ section:last-of-type {
   padding: 1.5rem;
   border-radius: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
@@ -112,6 +116,7 @@ section:last-of-type {
   border-radius: 5px;
   margin-top: 1rem;
   transition: background 0.3s;
+  max-width: max-content;
 }
 
 .btn:hover {
