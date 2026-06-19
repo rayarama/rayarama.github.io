@@ -1,120 +1,544 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raya Rama's Portfolio Page</title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Raya Ramadhan | Data Analyst Portfolio</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>"
+    />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons (for social media & tools) -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav>
-      <div class="nav-content">
-        <h1>Raya Rama</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
+
+  <body class="dark-theme">
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="themeToggleBtn" title="Toggle Theme">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">Raya <span>Rama</span></a>
+        <ul class="nav-menu">
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <section id="home">
-      <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Frontend Developer | UI Designer | Creator</p>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I'm a passionate frontend developer who loves creating beautiful and
-          functional websites.
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+      <div class="hero-content">
+        <span class="hero-badge">Aspiring Data Analyst</span>
+        <h1>
+          Turning Data Into
+          <span class="gradient-text">Strategic Decisions</span>
+        </h1>
+        <p class="hero-sub">
+          Detail-oriented Aspiring Data Analyst dedicated to helping
+          organizations uncover hidden patterns, build interactive dashboards,
+          and translate complex data into actionable business strategies.
         </p>
-        <div class="skills">
-          <div class="skill">HTML5</div>
-          <div class="skill">CSS3</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">Responsive Design</div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+
+        <!-- Core Stack Row -->
+        <div class="hero-tech-stack">
+          <span class="tech-title">Core Stack</span>
+          <div class="tech-icons">
+            <span class="tech-item" title="SQL"
+              ><i class="fa-solid fa-database"></i> SQL</span
+            >
+            <span class="tech-item" title="Python"
+              ><i class="fa-brands fa-python"></i> Python</span
+            >
+            <span class="tech-item" title="Tableau"
+              ><i class="fa-solid fa-chart-simple"></i> Tableau</span
+            >
+            <span class="tech-item" title="Excel"
+              ><i class="fa-solid fa-file-excel"></i> Excel</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Background decorative sphere -->
+        <div class="data-sphere"></div>
+
+        <!-- Floating Glassmorphic Dashboard Cards -->
+        <div class="floating-dashboard">
+          <!-- Main Chart Card -->
+          <div class="dashboard-card card-main">
+            <div class="card-header">
+              <span class="card-title">Sales Trend Analysis</span>
+              <span class="card-badge positive">Monthly</span>
+            </div>
+            <div class="card-chart">
+              <svg viewBox="0 0 200 80" class="mini-svg-chart">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop
+                      offset="0%"
+                      stop-color="var(--accent)"
+                      stop-opacity="0.4"
+                    />
+                    <stop
+                      offset="100%"
+                      stop-color="var(--accent)"
+                      stop-opacity="0"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M 0 60 Q 30 50 60 30 T 120 40 T 180 15 L 200 10 L 200 80 L 0 80 Z"
+                  fill="url(#chartGrad)"
+                />
+                <path
+                  d="M 0 60 Q 30 50 60 30 T 120 40 T 180 15 L 200 10"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <circle cx="200" cy="10" r="4" fill="var(--accent)" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Data Cleaning Card -->
+          <div class="dashboard-card card-metric">
+            <div class="metric-icon"><i class="fa-solid fa-broom"></i></div>
+            <div class="metric-info">
+              <span class="metric-label">Data Cleaning</span>
+              <span class="metric-value">No Missing Values</span>
+            </div>
+          </div>
+
+          <!-- A/B Test Card -->
+          <div class="dashboard-card card-clean">
+            <div class="metric-icon clean">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div class="metric-info">
+              <span class="metric-label">A/B Testing</span>
+              <span class="metric-value">95% Confidence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              An analytical and detail-oriented Agriculture graduate from
+              Brawijaya University, specializing in data-driven operations and
+              business intelligence. Having served as a Daya Support Officer
+              Intern at BTPN Syariah, I have hands-on experience in managing
+              operational performance tracking for approximately 60 field
+              facilitators, analyzing customer trends, and optimizing workflow
+              efficiencies under strict service-level agreements (SLAs).
+            </p>
+            <p>
+              To complement my operational background, I have certified as a
+              Full Stack Data Analyst through RevoU, mastering SQL, Python,
+              Tableau, and statistical analysis. I am committed to leveraging
+              data cleaning, exploratory analysis, and interactive dashboard
+              design to bridge the gap between raw datasets and strategic
+              corporate decision-making.
+            </p>
+          </div>
+          <div class="skills-box">
+            <h3>Skills & Toolkit</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"
+                ><i class="fa-brands fa-python"></i> Python (Pandas,
+                NumPy)</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-database"></i> SQL (Google BigQuery,
+                SQLite)</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-chart-simple"></i> Tableau</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-square-poll-vertical"></i> Excel & Google
+                Sheets (Pivot, VLOOKUP, Data Cleaning)</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-calculator"></i> Statistics & A/B
+                Testing</span
+              >
+              <span class="skill-tag"
+                ><i class="fa-solid fa-chart-line"></i> Data Visualization</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
       <div class="container">
-        <h2>My Projects</h2>
-        <div class="project-grid">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
           <div class="project-card">
-            <h3>Simple Blog Design</h3>
-            <p>A website built with HTML and CSS | A roadmap.sh project</p>
-            <a
-              href="https://simple-blog-roadmap.vercel.app"
-              class="btn"
-              target="_blank"
-              >View Project</a
-            >
+            <div class="project-header">
+              <i class="fa-solid fa-cart-shopping project-icon"></i>
+              <span class="project-category">Business Analytics</span>
+            </div>
+            <h3>
+              Olist E-Commerce: Data-Driven Analysis of Customer Satisfaction
+            </h3>
+            <p class="project-desc">
+              Analyzed e-commerce customer satisfaction using
+              <strong>Olist's public dataset</strong> and Root Cause Analysis to
+              identify delivery bottlenecks, proposing early-warning strategies
+              projected to reduce severe delays by 30% and boost average
+              ratings.
+            </p>
+
+            <div class="project-tech">
+              <span>SQLite</span>
+              <span>Tableau</span>
+              <span>Root Cause Analysis</span>
+            </div>
+            <a href="#" class="project-link"
+              >View on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
           </div>
+
+          <!-- Project 2 -->
           <div class="project-card">
-            <h3>Simple Quote Generator</h3>
-            <p>A simple quote generator using JavaScript</p>
-            <a
-              href="https://rayarama.github.io/quote-generator"
-              class="btn"
-              target="_blank"
-              >View Project</a
-            >
+            <div class="project-header">
+              <i class="fa-solid fa-flask project-icon"></i>
+              <span class="project-category"
+                >A/B Testing & Experimentation</span
+              >
+            </div>
+            <h3>TokoBli: Campaign Evaluation & Product Page A/B Testing</h3>
+            <p class="project-desc">
+              Evaluated new product page designs through A/B Testing and T-Test
+              statistical analysis, validating a significant increase in
+              transaction values to drive data-backed rollout decisions.
+            </p>
+            <div class="project-tech">
+              <span>Google Sheets</span>
+              <span>Statistics</span>
+              <span>A/B Testing</span>
+            </div>
+            <a href="#" class="project-link"
+              >View on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
           </div>
+
+          <!-- Project 3 -->
           <div class="project-card">
-            <h3>Todo App</h3>
+            <div class="project-header">
+              <i class="fa-solid fa-database project-icon"></i>
+              <span class="project-category">Sales Analytics</span>
+            </div>
+            <h3>RevoGrocers: SQL-Driven Sales Performance Analysis</h3>
+            <p class="project-desc">
+              Executed complex SQL queries involving multi-table JOINs and
+              Window Functions to analyze sales performance, calculate
+              cumulative transactions, and measure customer repeat purchase
+              rates to support inventory planning.
+            </p>
+            <div class="project-tech">
+              <span>SQL</span>
+              <span>BigQuery</span>
+              <span>Analytics</span>
+            </div>
+            <a href="#" class="project-link"
+              >View Dashboard
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fa-solid fa-wallet project-icon"></i>
+              <span class="project-category">Data Visualization</span>
+            </div>
+            <h3>RevoFinance: Expense & Budget Utilization Dashboard</h3>
+            <p class="project-desc">
+              Designed an end-to-end interactive dashboard using advanced data
+              relationships and Level of Detail (LOD) expressions to dynamically
+              track expenses and identify top-spending merchants.
+            </p>
+            <div class="project-tech">
+              <span>Tableau</span>
+              <span>Dashboard Design</span>
+              <span>Data Viz</span>
+            </div>
+            <a href="#" class="project-link"
+              >View Dashboard
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-header">
+              <i class="fa-solid fa-users project-icon"></i>
+              <span class="project-category">Customer Analytics</span>
+            </div>
+            <h3>RevoBank: Customer Segmentation using RFM Model</h3>
+            <p class="project-desc">
+              Performed comprehensive data cleaning and implemented an RFM
+              segmentation model to categorize users into High Value and At-Risk
+              segments, enabling targeted retention strategies.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+            </div>
+            <a href="#" class="project-link"
+              >View Dashboard
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Tableau Dashboard Showcase -->
+    <section id="dashboard" class="dashboard-section">
+      <div class="container">
+        <h2 class="section-title">Interactive Tableau Dashboard</h2>
+        <p class="section-subtitle">
+          Explore the live, fully interactive companion dashboard for the
+          <strong>Olist E-Commerce Analysis</strong> project featured above,
+          built using
+          <a
+            href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce"
+            target="_blank"
+            style="
+              color: var(--accent);
+              text-decoration: none;
+              font-weight: 600;
+              transition: var(--transition);
+            "
+            >Olist's public Brazilian e-commerce dataset from Kaggle</a
+          >
+          to visualize satisfaction and delivery performance.
+        </p>
+        <div class="tableau-container-box">
+          <!-- Desktop/Tablet Embed Wrapper -->
+          <div class="tableau-embed-wrapper">
+            <div
+              class="tableauPlaceholder"
+              id="viz1781868336241"
+              style="position: relative; width: 100%"
+            >
+              <noscript>
+                <a href="#"
+                  ><img
+                    alt=" "
+                    src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DE&#47;DEEPP_olist_dashboard_fix&#47;OlistDashboard&#47;1_rss.png"
+                    style="border: none"
+                /></a>
+              </noscript>
+              <object class="tableauViz" style="display: none">
+                <param
+                  name="host_url"
+                  value="https%3A%2F%2Fpublic.tableau.com%2F"
+                />
+                <param name="embed_code_version" value="3" />
+                <param name="site_root" value="" />
+                <param
+                  name="name"
+                  value="DEEPP_olist_dashboard_fix&#47;OlistDashboard"
+                />
+                <param name="tabs" value="yes" />
+                <param name="toolbar" value="yes" />
+                <param
+                  name="static_image"
+                  value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DE&#47;DEEPP_olist_dashboard_fix&#47;OlistDashboard&#47;1.png"
+                />
+                <param name="animate_transition" value="yes" />
+                <param name="display_static_image" value="yes" />
+                <param name="display_spinner" value="yes" />
+                <param name="display_overlay" value="yes" />
+                <param name="display_count" value="yes" />
+                <param name="language" value="en-US" />
+              </object>
+            </div>
+            <script type="text/javascript">
+              var divElement = document.getElementById("viz1781868336241");
+              var vizElement = divElement.getElementsByTagName("object")[0];
+
+              // Initial dimensions setting for Tableau viz API initialization
+              if (divElement.offsetWidth > 800) {
+                vizElement.style.minWidth = "1366px";
+                vizElement.style.maxWidth = "100%";
+                vizElement.style.minHeight = "818px";
+                vizElement.style.maxHeight = "818px";
+              } else if (divElement.offsetWidth > 500) {
+                vizElement.style.minWidth = "1366px";
+                vizElement.style.maxWidth = "100%";
+                vizElement.style.minHeight = "818px";
+                vizElement.style.maxHeight = "818px";
+              } else {
+                vizElement.style.width = "100%";
+                vizElement.style.minHeight = "2000px";
+                vizElement.style.maxHeight = "2000px";
+              }
+
+              var scriptElement = document.createElement("script");
+              scriptElement.src =
+                "https://public.tableau.com/javascripts/api/viz_v1.js";
+              vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+              // Dynamic scaling to achieve a fit-to-width/full-view layout without scrollbars
+              function resizeTableau() {
+                var container = document.querySelector(
+                  ".tableau-container-box",
+                );
+                var placeholder = document.getElementById("viz1781868336241");
+
+                if (!container || !placeholder) return;
+
+                // If mobile screen, let CSS handle it (display: none for embed)
+                if (window.innerWidth <= 768) {
+                  container.style.height = "auto";
+                  return;
+                }
+
+                // Total horizontal padding of container is 3rem (48px)
+                var containerWidth = container.clientWidth - 48;
+                var baseWidth = 1366;
+                var baseHeight = 818;
+
+                if (containerWidth < baseWidth) {
+                  var scale = containerWidth / baseWidth;
+                  placeholder.style.transform = "scale(" + scale + ")";
+                  placeholder.style.transformOrigin = "top left";
+                  placeholder.style.width = baseWidth + "px";
+                  placeholder.style.height = baseHeight + "px";
+                  container.style.height = baseHeight * scale + 48 + "px";
+                } else {
+                  placeholder.style.transform = "none";
+                  placeholder.style.transformOrigin = "initial";
+                  placeholder.style.width = "100%";
+                  placeholder.style.height = baseHeight + "px";
+                  container.style.height = baseHeight + 48 + "px";
+                }
+              }
+
+              // Run resizing handlers on state changes
+              window.addEventListener("resize", resizeTableau);
+              window.addEventListener("load", resizeTableau);
+
+              // Multiple timeouts to capture delayed load of Tableau Public assets
+              setTimeout(resizeTableau, 500);
+              setTimeout(resizeTableau, 1500);
+              setTimeout(resizeTableau, 3000);
+              setTimeout(resizeTableau, 5000);
+            </script>
+          </div>
+
+          <!-- Mobile Fallback Card -->
+          <div class="tableau-mobile-fallback">
+            <div class="fallback-icon">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <h3>Dashboard Optimized for Desktop</h3>
             <p>
-              A simple todo app to learn how to access localStorage | A
-              freeCodeCamp.org project
+              For the best interactive experience with full charts, filters, and
+              tooltips, please view this dashboard on a desktop or tablet.
             </p>
             <a
-              href="https://rayarama.github.io/todo-app/"
-              class="btn"
+              href="https://public.tableau.com/views/DEEPP_olist_dashboard_fix/OlistDashboard"
               target="_blank"
-              >View Project</a
+              class="btn btn-primary fallback-btn"
             >
-          </div>
-          <div class="project-card">
-            <h3>GitHub Profile Viewer</h3>
-            <p>
-              A simple GitHub profile viewer to lear how to access an API | A
-              roadmap.sh project
-            </p>
-            <a
-              href="https://rayarama.github.io/github-profile-viewer"
-              class="btn"
-              target="_blank"
-              >View Project</a
-            >
+              <i class="fa-solid fa-square-poll-vertical"></i> Open in Tableau
+              Public
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
       <div class="container">
-        <h2>Contact Me</h2>
-        <div class="social-links">
-          <a href="https://github.com/rayarama"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/rayaramadhan"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a href="https://x.com/rayarama1"><i class="fab fa-twitter"></i></a>
+        <div class="contact-box">
+          <h2>Let's Build Something Together!</h2>
+          <p>
+            I am actively seeking full-time opportunities or freelance roles as
+            a Junior Data Analyst. If you'd like to discuss my work or potential
+            roles, let's connect!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:rayarama12@gmail.com" class="contact-item"
+              ><i class="fa-solid fa-envelope"></i> rayarama12@gmail.com</a
+            >
+            <a
+              href="https://linkedin.com/in/rayaramadhan"
+              target="_blank"
+              class="contact-item"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            >
+            <a
+              href="https://github.com/rayarama"
+              target="_blank"
+              class="contact-item"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+          </div>
+          <div class="resume-download">
+            <a
+              href="https://drive.google.com/file/d/1M3E2hfbAbbEe4agL71EMGs50FcFfCeb6/view?usp=sharing"
+              target="_blank"
+              class="btn btn-primary"
+              ><i class="fa-solid fa-file-arrow-down"></i> Download My CV</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Raya Ramadhan. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
