@@ -4,7 +4,7 @@ Welcome to my personal Data Analyst portfolio website repository! This is a mode
 
 ## 📊 Live Demo
 Deploy your own live URL using GitHub Pages:
-**[View Live Portfolio Website](https://rayarama.github.io/)** *(Replace with your active GitHub Pages link after deployment)*
+**[View Live Portfolio Website](https://rayarama.github.io/)**
 
 ---
 
