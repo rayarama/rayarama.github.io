@@ -51,6 +51,7 @@
     <header id="hero" class="hero-section">
       <div class="hero-content">
         <span class="hero-badge">Aspiring Data Analyst</span>
+        <p class="hero-greeting">Hi, I'm <span class="highlight-name">Raya Ramadhan</span></p>
         <h1>
           Turning Data Into
           <span class="gradient-text">Strategic Decisions</span>
@@ -234,9 +235,9 @@
               <span>Tableau</span>
               <span>Root Cause Analysis</span>
             </div>
-            <a href="#" class="project-link"
-              >View on GitHub
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            <a href="#" class="project-link btn-project-details" data-project="olist"
+              >Read Case Study
+              <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
 
@@ -259,9 +260,9 @@
               <span>Statistics</span>
               <span>A/B Testing</span>
             </div>
-            <a href="#" class="project-link"
-              >View on GitHub
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            <a href="#" class="project-link btn-project-details" data-project="tokobli"
+              >Read Case Study
+              <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
 
@@ -283,9 +284,9 @@
               <span>BigQuery</span>
               <span>Analytics</span>
             </div>
-            <a href="#" class="project-link"
-              >View Dashboard
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            <a href="#" class="project-link btn-project-details" data-project="revogrocers"
+              >Read Case Study
+              <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <!-- Project 4 -->
@@ -305,9 +306,9 @@
               <span>Dashboard Design</span>
               <span>Data Viz</span>
             </div>
-            <a href="#" class="project-link"
-              >View Dashboard
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            <a href="#" class="project-link btn-project-details" data-project="revofinance"
+              >Read Case Study
+              <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
           <!-- Project 5 -->
@@ -327,9 +328,9 @@
               <span>Pandas</span>
               <span>NumPy</span>
             </div>
-            <a href="#" class="project-link"
-              >View Dashboard
-              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            <a href="#" class="project-link btn-project-details" data-project="revobank"
+              >Read Case Study
+              <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
         </div>
@@ -499,28 +500,49 @@
     <section id="contact" class="contact-section">
       <div class="container">
         <div class="contact-box">
+          <div class="availability-status">
+            <span class="pulse-dot"></span>
+            <span>Available for Hire & Freelance</span>
+          </div>
           <h2>Let's Build Something Together!</h2>
           <p>
             I am actively seeking full-time opportunities or freelance roles as
             a Junior Data Analyst. If you'd like to discuss my work or potential
             roles, let's connect!
           </p>
-          <div class="contact-links">
-            <a href="mailto:rayarama12@gmail.com" class="contact-item"
-              ><i class="fa-solid fa-envelope"></i> rayarama12@gmail.com</a
-            >
-            <a
-              href="https://linkedin.com/in/rayaramadhan"
-              target="_blank"
-              class="contact-item"
-              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
-            >
-            <a
-              href="https://github.com/rayarama"
-              target="_blank"
-              class="contact-item"
-              ><i class="fa-brands fa-github"></i> GitHub</a
-            >
+          <div class="contact-cards">
+            <!-- Email Card with Copy Feature -->
+            <div class="contact-card email-card" id="copyEmailCard" onclick="copyEmailToClipboard()">
+              <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="card-content">
+                <span class="card-label">Email Me</span>
+                <span class="card-value" id="emailText">rayarama12@gmail.com</span>
+              </div>
+              <button class="copy-btn" title="Copy email address" aria-label="Copy email address">
+                <i class="fa-regular fa-copy" id="copyIcon"></i>
+              </button>
+              <div class="toast-tooltip" id="copyTooltip">Copied!</div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://linkedin.com/in/rayaramadhan" target="_blank" class="contact-card">
+              <div class="card-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="card-content">
+                <span class="card-label">LinkedIn</span>
+                <span class="card-value">rayaramadhan</span>
+              </div>
+              <div class="arrow-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/rayarama" target="_blank" class="contact-card">
+              <div class="card-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="card-content">
+                <span class="card-label">GitHub</span>
+                <span class="card-value">rayarama</span>
+              </div>
+              <div class="arrow-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
           </div>
           <div class="resume-download">
             <a
@@ -538,6 +560,53 @@
     <footer class="footer">
       <p>&copy; 2026 Raya Ramadhan. All rights reserved.</p>
     </footer>
+
+    <!-- Project Case Study Modal -->
+    <div id="projectModal" class="modal-backdrop">
+      <div class="modal-content">
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-header">
+          <span class="modal-category" id="modalCategory">Business Analytics</span>
+          <h2 class="modal-title" id="modalTitle">Project Title</h2>
+          <div class="modal-tags" id="modalTags">
+            <span>SQL</span>
+            <span>Tableau</span>
+          </div>
+        </div>
+        <div class="modal-body-content">
+          <!-- Case Study Sections -->
+          <div class="case-study-section">
+            <h3 class="section-subtitle-modal"><i class="fa-solid fa-circle-question"></i> Background & Business Problem</h3>
+            <div id="modalProblem" class="modal-text">Problem statement details will go here...</div>
+          </div>
+          
+          <div class="case-study-section">
+            <h3 class="section-subtitle-modal"><i class="fa-solid fa-gears"></i> Methodology & Process</h3>
+            <div id="modalMethodology" class="modal-text">Methodology details will go here...</div>
+          </div>
+          
+          <div class="case-study-section">
+            <h3 class="section-subtitle-modal"><i class="fa-solid fa-chart-line"></i> Key Insights & Findings</h3>
+            <div id="modalInsights" class="modal-text">Key insights details will go here...</div>
+          </div>
+          
+          <div class="case-study-section">
+            <h3 class="section-subtitle-modal"><i class="fa-solid fa-lightbulb"></i> Business Recommendations</h3>
+            <div id="modalRecommendations" class="modal-text">Recommendations details will go here...</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" id="modalGithubLink" target="_blank" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i> View GitHub Code
+          </a>
+          <a href="#" id="modalLiveLink" target="_blank" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
