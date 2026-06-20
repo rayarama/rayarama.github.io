@@ -2,6 +2,9 @@
 
 Welcome to my personal Data Analyst portfolio website repository! This is a modern, responsive, and interactive single-page portfolio built using vanilla HTML5, CSS3, and JavaScript, designed to showcase my background, skills, featured analytical projects, and data visualizations.
 
+> [!NOTE]
+> This website was built and polished using **Antigravity**, an agentic AI coding assistant by Google DeepMind, to achieve high-performance interactive elements, responsive UI design, and optimized asset delivery.
+
 ## 📊 Live Demo
 Deploy your own live URL using GitHub Pages:
 **[View Live Portfolio Website](https://rayarama.github.io/)**
@@ -14,6 +17,7 @@ Deploy your own live URL using GitHub Pages:
 *   **Interactivity:** Vanilla JavaScript (Theme toggle toggling between dark/light mode, dynamic scale-to-fit resizing for Tableau embed)
 *   **Icons:** [FontAwesome v6](https://fontawesome.com/)
 *   **Typography:** Google Fonts (Plus Jakarta Sans)
+*   **Development Assistant:** Built with **Antigravity AI**
 
 ---
 
@@ -25,3 +29,15 @@ Deploy your own live URL using GitHub Pages:
     *   **Desktop/Tablet:** Embedded Tableau Public visualization from the Olist customer satisfaction project. Built with dynamic JavaScript auto-scaling to fit the container width, offering a seamless "full view" without awkward scrollbars.
     *   **Mobile Screen:** Automatically hides the heavy iframe in favor of a beautiful mobile fallback card with an interactive button to open the dashboard directly in Tableau Public.
 5.  **Theme Toggle:** Supports seamless switching between light and dark modes.
+
+---
+
+## 📂 Project Structure
+```text
+├── index.html     # Main structure & semantic layout
+├── style.css      # Custom design tokens, glassmorphism UI, & responsive stylesheets
+├── app.js         # Interactive features (Tableau auto-scaling, theme switcher)
+└── README.md      # Project documentation
+```
+
+
