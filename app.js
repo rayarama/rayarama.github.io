@@ -146,7 +146,7 @@ const projectsData = {
                              <li><strong>Proactive Customer Compensation:</strong> Automatically issue discount vouchers or shipping refunds to users whose deliveries cross the critical 7-day delay threshold, mitigating negative sentiment before they leave a review.</li>
                              <li><strong>Logistics Partner Optimization:</strong> Implement a dynamic rating system for third-party logistics carriers, penalizing routes with consistent bottlenecks and shifting order volumes to higher-performing delivery partners.</li>
                           </ul>`,
-        github: "https://github.com/rayarama", // Update with your actual GitHub repository URL
+        github: "https://github.com/rayarama/Olist_E-Commerce_Analysis", // 
         live: "https://public.tableau.com/views/DEEPP_olist_dashboard_fix/OlistDashboard" // Update with your interactive Tableau Dashboard URL (set to null if none)
     },
     // 2. TokoBli A/B Testing Project
@@ -169,7 +169,7 @@ const projectsData = {
                              <li><strong>Iterate Mobile Optimizations:</strong> Given the strong response from mobile shoppers, prioritize future UI/UX experiments specifically targeting the mobile checkout funnel to further compound these gains.</li>
                              <li><strong>Continuous Experimentation Pipeline:</strong> Institutionalize the A/B testing framework built in Google Sheets across other product categories, making data-validated design changes standard operational procedure.</li>
                           </ul>`,
-        github: "https://github.com/rayarama", // Update with your GitHub URL
+        github: "https://github.com/rayarama/TokoBli_AB_Testing", // Update with your GitHub URL
         live: null // Set to null if there is no live deployment/dashboard link
     },
     // 3. RevoGrocers SQL Sales Project
@@ -214,8 +214,8 @@ const projectsData = {
                              <li><strong>Merchant Partnership Programs:</strong> Since spending is highly concentrated, RevoFinance should establish strategic partnerships or cashback programs with those top-tier merchants to provide exclusive discounts, directly lowering the users' highest expense drivers.</li>
                              <li><strong>Dynamic Budget Re-allocation:</strong> Introduce an algorithmic feature that allows users to dynamically shift unused funds from under-utilized categories into high-strain categories mid-year, optimizing their overall financial runway.</li>
                           </ul>`,
-        github: "https://github.com/rayarama", // Update with your GitHub URL
-        live: "https://public.tableau.com/views/DEEPP_olist_dashboard_fix/OlistDashboard" // Update with your actual dashboard link
+        github: "https://github.com/rayarama/RevoFinance_Expense_Dashboard", 
+        live: "https://public.tableau.com/views/RevoU_DataViz/MainDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" // Update with your actual dashboard link
     },
     // 5. RevoBank Python Customer Segmentation Project
     revobank: {
@@ -236,7 +236,7 @@ const projectsData = {
                              <li><strong>Win-Back Re-engagement Campaigns:</strong> Launch immediate, targeted promotional campaigns offering high-incentive rewards for "At Risk" customers to reactivate their spending habits.</li>
                              <li><strong>Credit Limit Upsell Strategy:</strong> Offer systematic credit limit increases and targeted cashback rewards for high-frequency categories to the "Latent Loyalist" segment, encouraging them to use their cards for larger transactions.</li>
                           </ul>`,
-        github: "https://github.com/rayarama", // Update with your GitHub URL
+        github: "https://github.com/rayarama/RevoBank_Customer_Segmentation", // Update with your GitHub URL
         live: null // Set to null if there is no live link
     }
 };
